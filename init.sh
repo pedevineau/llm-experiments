@@ -3,6 +3,9 @@
 # change the session name and the working directory if necessary
 SESSION=onyxia
 WORK_DIR=/home/${SESSION}/work
+MODEL_PATH=pdevineau/sentenceCamenBERT
+
+mc cp --r s3/${MODEL_PATH} $WORK_DIR
 
 CLONE_DIR=${WORK_DIR}/llm-experiments
 ENV_DIR=${WORK_DIR}/llm-env

@@ -15,7 +15,7 @@ REPO_URL=git@github.com:llm-experiments.git
 git clone --depth 1 $REPO_URL $CLONE_DIR
 
 python3 -m venv $ENV_DIR
-source ${ENV_DIR}/bin/activate
+# source ${ENV_DIR}/bin/activate
 
 # Install additional packages if needed
 REQUIREMENTS_FILE=${CLONE_DIR}/requirements.txt

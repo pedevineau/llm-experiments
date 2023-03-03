@@ -15,7 +15,7 @@ REPO_URL=git@github.com:llm-experiments.git
 LLAMA_URL=git@github.com:pedevineau/llama.git
 
 git clone --depth 1 $REPO_URL $CLONE_DIR
-git clone --depth 1 $LLAMA_URL $CLONE_DIR
+git clone --depth 1 $LLAMA_URL $LLAMA_DIR
 
 python3 -m venv $ENV_DIR
 # Install additional packages if needed

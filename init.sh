@@ -12,7 +12,7 @@ LLAMA_DIR=${WORK_DIR}/llama
 ENV_DIR=${WORK_DIR}/llm-env
 # Clone course repository
 REPO_URL=git@github.com:llm-experiments.git
-LLAMA_URL=git@github.com:facebookresearch/llama.git
+LLAMA_URL=git@github.com:pedevineau/llama.git
 
 git clone --depth 1 $REPO_URL $CLONE_DIR
 git clone --depth 1 $LLAMA_URL $CLONE_DIR

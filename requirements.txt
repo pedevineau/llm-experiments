@@ -1,2 +1,6 @@
 sentence-transformers==2.2.2
 polars==0.16.2
+torch   # for llama
+fairscale  # for llama
+fire  # for llama
+sentencepiece   # for llama

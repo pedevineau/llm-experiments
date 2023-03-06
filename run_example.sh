@@ -1,6 +1,9 @@
-MINIO_PATH=TO_BE_REPLACED
-TARGET_FOLDER=/home/onyxia/work
-LLAMA_FOLDER=/home/onyxia/work/llama
-mc cp -r $MINIO_PATH $TARGET_FOLDER
+SESSION=onyxia
+WORK_DIR=/home/${SESSION}/work
+TARGET_FOLDER=${WORK_DIR}/llm-experiment
+MODEL_SIZE=7B
+LLAMA_FOLDER=${TARGET_FOLDER}/llama
 MP=1
-torchrun --nproc_per_node $MP ${EXAMPLE_FOLDER}/example.py --ckpt_dir $TARGET_FOLDER/model_size --tokenizer_path $TARGET_FOLDER/tokenizer.model
+cd $LLAMA_FOLDER & pip install -e
+
+torchrun --nproc_per_node $MP ${TARGET_FOLDER}/example.py --ckpt_dir ${WORK_DIR}/${MODEL_SIZE} --tokenizer_path ${WORK_DIR}/tokenizer.model
